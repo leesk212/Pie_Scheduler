@@ -5,4 +5,4 @@
 
 ## History
 ### 2020/12/28
-![snapshot](./IMG/2020_12_28)
+![snapshot](./IMG/2020_12_28.png)
