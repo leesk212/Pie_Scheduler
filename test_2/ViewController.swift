@@ -9,7 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     //class안에 있는 함수들은 메서드라고 부른다.
+    
+    
+    var randomValue : Int = 0
+    var trancout: Int = 0
+    
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var tryCountLabel: UILabel!
+    @IBOutlet weak var sliderValue: UILabel!
+    @IBOutlet weak var minimunLable: UILabel!
+    @IBOutlet weak var maximunLable: UILabel!
     
     override func viewDidLoad() {
         //매개변수가 없는 함수도 있음
@@ -35,8 +44,24 @@ class ViewController: UIViewController {
     }
     
     func reset(){
+        randomValue = Int.random(in: 0...30)
+        // 범위 연산자 A...B closed
+        //          A..<B half open
+        //          A...
+        print(randomValue)
+        tryCountLabel.text = "0 /5"
+        slider.minimumValue = 0
+        slider.maximumValue = 30
+        slider.value = 15 //slider가 reset이벤트에 제자리에 올 수 있는 이유가, 0~30까지 설정을 기본으로 해놓고, 15를 reset값으로 설정해놨기에 자동으로 reset을 누르게 되면 중앙으로 값이 이동 되게 된다.
+        minimunLable.text = "0"
+        maximunLable.text = "30"
+        sliderValue.text = "15"
+        
         print("reset!")
     }
 
 }
-
+// var[let] randomValue: Int = 0 변수 또는 상수의 선언
+//                     : String = "String"
+//                     : Float[Double]
+//                     : 변수의 살아있는 부분은 중괄호 까지만 살아있는 범위가 된다.
