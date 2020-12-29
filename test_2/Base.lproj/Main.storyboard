@@ -41,7 +41,6 @@
                                 <state key="normal" title="Reset" image="trash.fill" catalog="system"/>
                                 <connections>
                                     <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5m-h6-DCF"/>
-                                    <action selector="touchUphitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XbM-VZ-pkg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnt-2a-Sbu">
@@ -51,8 +50,8 @@
                                 <state key="normal" title="Commit" image="checkmark.circle.fill" catalog="system"/>
                                 <state key="highlighted" image="checkmark.circle" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kty-47-qus">
-                                <rect key="frame" x="31" y="60" width="25" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kty-47-qus">
+                                <rect key="frame" x="35" y="60" width="25" height="24"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" image="info.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -65,13 +64,16 @@
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNz-Jh-Hx3">
-                                <rect key="frame" x="354" y="40" width="25" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNz-Jh-Hx3">
+                                <rect key="frame" x="358" y="40" width="21" height="64"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" image="moon.circle" catalog="system">
                                     <color key="titleColor" systemColor="systemGray6Color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchUphitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tp5-hi-lWV"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-zi-Ll8">
                                 <rect key="frame" x="29" y="778" width="356" height="31"/>
@@ -116,7 +118,6 @@
                             <constraint firstItem="Nnt-2a-Sbu" firstAttribute="leading" secondItem="P8p-8z-gjo" secondAttribute="trailing" constant="121" id="BnD-gD-Mpq"/>
                             <constraint firstItem="Kty-47-qus" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="CCy-yW-XV6"/>
                             <constraint firstItem="Kty-47-qus" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="CQ1-f5-W4l"/>
-                            <constraint firstItem="VNz-Jh-Hx3" firstAttribute="leading" secondItem="Kty-47-qus" secondAttribute="trailing" constant="298" id="DAC-wv-Esr"/>
                             <constraint firstItem="VNz-Jh-Hx3" firstAttribute="centerY" secondItem="Kty-47-qus" secondAttribute="centerY" id="FEK-sN-6bq"/>
                             <constraint firstItem="P8p-8z-gjo" firstAttribute="top" secondItem="AMF-zi-Ll8" secondAttribute="bottom" constant="11" id="Fx3-c7-Le7"/>
                             <constraint firstItem="58F-mh-XRo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I3r-Mp-Tbj"/>

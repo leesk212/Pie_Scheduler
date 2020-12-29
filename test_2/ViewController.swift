@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     
     var randomValue : Int = 0
-    var trancout: Int = 0
+    var trycount: Int = 0
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var tryCountLabel: UILabel!
@@ -28,16 +28,40 @@ class ViewController: UIViewController {
         reset()
     }
     //IBAction이 붙은 것들은 event와 관계가 있음
+    // 어떤 이벤트인지는 스토리보드에서 직접적으로 연결해주는 것인듯함
+    // 그것에 따라서 달라지고,
+    // sender에 들어가는 메서드를 통해서 어떤 종류의 이벤트인지
+    // 확인할 수 있음
     @IBAction func sildervalue(_ sender: UISlider){
         // 함수 함수이름 ( 매개변수 누가 호출했는지: UISlider )
         print(sender.value)
+        // label에 보여줄 수 있는 값은 string값임!!!
+        sliderValue.text = String(Int(sender.value))
+        
         //viewDidLoad() //Human Error logical Error -> 컴퓨터는 이것을 오류라고 반영하지 않지만, 사람의 실수로 만들어진 오류임
     } //이벤트에 반응하는 Action=> IBAction
     
     @IBAction func touchUphitButton(_ sender: UIButton){
         print(slider.value)
+        slider.value = Float(Int(slider.value))
+        trycount = trycount + 1
+        //tryCountLabel.text = String(trycount) + " / 5"
+        tryCountLabel.text = "\(trycount) / 5"
+        //같은 형태의 함수임
+        
+        if randomValue == Int(slider.value) {
+            print("You HIT!!")
+            reset()
+            return
+        } // >= <= 등등..
+        
+        if trycount >= 5 {
+            print("You lose..")
+            reset()
+            return
+        }
     }
-    
+    // Outlabel이 화면에 떠있는 값들의 label의 이름이고, 그것들의 값을 바꿔주기 위해서는 변수로 선언한 것의 text method를 통해서 값을 바꿔줄 수 있다. (연결법 파악완료)
     @IBAction func touchUpResetButton(_ sender:UIButton){
         print("Touch Up Reset Button")
         reset()
